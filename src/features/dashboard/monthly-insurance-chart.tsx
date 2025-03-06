@@ -9,12 +9,13 @@ import {
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 const chartData = [
-  { month: "January", personalized: 186, instant: 80 },
-  { month: "February", personalized: 305, instant: 200 },
-  { month: "March", personalized: 237, instant: 120 },
-  { month: "April", personalized: 73, instant: 190 },
-  { month: "May", personalized: 309, instant: 130 },
-  { month: "June", personalized: 214, instant: 140 },
+  { month: "May", personalized: 20, instant: 40 },
+  { month: "June", personalized: 25, instant: 55 },
+  { month: "July", personalized: 10, instant: 25 },
+  { month: "August", personalized: 15, instant: 45 },
+  { month: "September", personalized: 15, instant: 40 },
+  { month: "October", personalized: 25, instant: 60 },
+  { month: "November", personalized: 10, instant: 55 },
 ];
 
 const chartConfig = {
@@ -31,9 +32,13 @@ const chartConfig = {
 export function MonthlyInsuranceChart() {
   return (
     <ChartContainer config={chartConfig}>
-      <BarChart accessibilityLayer data={chartData} margin={{
-        left: -20
-      }}>
+      <BarChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: -20,
+        }}
+      >
         <CartesianGrid vertical={false} />
         <XAxis
           dataKey="month"
